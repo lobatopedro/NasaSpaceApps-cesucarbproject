@@ -1,0 +1,90 @@
+ nav ul a,
+ nav .brand-logo {
+   color: #444;
+ }
+ 
+ p {
+   line-height: 2rem;
+ }
+ 
+ .sidenav-trigger {
+   color: #0d47a1;
+ }
+
+ .button-color {
+  background-color: #BA3B23 !important;
+ }
+ 
+ .parallax-container {
+   min-height: 380px;
+   line-height: 0;
+   height: auto;
+   color: rgba(255,255,255,.9);
+ }
+   .parallax-container .section {
+     width: 100%;
+   }
+ 
+ @media only screen and (max-width : 992px) {
+   .parallax-container .section {
+     position: absolute;
+     top: 40%;
+   }
+   #index-banner .section {
+     top: 10%;
+   }
+ }
+ 
+ @media only screen and (max-width : 600px) {
+   #index-banner .section {
+     top: 0;
+   }
+ }
+ 
+ .icon-block {
+   padding: 0 15px;
+ }
+ .icon-block .material-icons {
+   font-size: inherit;
+ }
+ 
+ footer.page-footer {
+   margin: 0;
+ }
+ 
+ .waves-effect.waves-blue .waves-ripple {
+  background-color: rgba(0, 150, 136, 0.7);
+}
+
+ .logo {
+  height: 30px;
+}
+
+.modal-font {
+  font-size: 25;
+}
+
+#sorting-row {
+	padding-top: 0px;
+	@media only screen and (max-width: 992px) {
+		padding-top:46px;
+	}
+}
+.lazyload {
+  opacity: 0;
+}
+.lazyloading {
+  opacity: 1;
+  transition: 600ms opacity;
+  background: #f7f7f7 url(https://afarkas.github.io/lazysizes/assets/imgs/loader.gif) no-repeat center;
+  min-height: 60px;
+}
+#Container .mix{
+    display: none;
+}
+.project-cards-container {
+	-webkit-backface-visibility: hidden;
+	.mix {
+    display: inline-block;
+  }
+}
