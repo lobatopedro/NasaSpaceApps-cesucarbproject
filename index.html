@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/materialize/css/materialize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
@@ -19,13 +21,14 @@
     <div>
         <nav>
             <div class="nav-wrapper degrade">
-                <div class="logo left"><a href="HomeScreen.html"></a></div>
+                <div class="logo left"><a href="HomeScreen.html"></a><h3 style="margin-top: 0">CesuFire <i class="glyphicon glyphicon-fire" style="color:black !important;"></i></h3></div>
             </div>
         </nav>
 
         <ul id="slide-out" class="sidenav sidenav-fixed margem fundoCinza">
-            <li><a class="modal-trigger" data-target="modalAverageLand" href="#" id="TempMedia">Temperatura média da superfície da terra</a></li>
-            <li><a class="modal-trigger" data-target="modalActiveFire" href="#" id="ActiveFire">Focos de Incêndio</a></li>
+            <li><a class="modal-trigger" data-target="modalAverageLand" href="#" id="TempMedia">Temperatura média da superfície</a></li>
+            <li><a class="modal-trigger" data-target="modalActiveFire" href="#" id="ActiveFire">Focos de incêndio</a></li>
+            <li><a class="modal-trigger" data-target="modalFireRisk" href="#" id="FireRisk">Risco de incêndio</a></li>
             <li><a href="#" id="ClearGlobe">Limpar Globo Terrestre</a></li>
         </ul>
     </div>
@@ -71,10 +74,39 @@
         </div>
     </div>
 
-    <div class="center #000000 black">
+    <!-- Modal Structure -->
+    <div id="modalFireRisk" class="modal">
+        <div class="modal-content">
+            <h4>Fire risk</h4>
+            <p>
+                Fire is a very common thing in our lives, but
+                did you know the risks it can bring? Many fires
+                are naturally caused, for example, by lava in erupting volcanoes,
+                but most of the fires are started by people, being accidentally or
+                on pupose, they can destroy forests or even cities.
+            </p>
+            <p>Are you curious and want to see more? click
+                <a href="https://neo.sci.gsfc.nasa.gov/view.php?datasetId=MOD14A1_M_FIRE" target="_blank">here.</a>
+            </p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat #eceff1 blue-grey lighten-5">Ok</a>
+        </div>
+    </div>
+
+
+    <div id="globe" class="center #000000 black">
         <canvas id="canvasOne" width="1370" height="566">
             Your browser does not support HTML5 Canvas.
         </canvas>
+    </div>
+
+
+    <input style="margin-left: 16%; display: none" type="text" id="risk-filter" placeholder="Procure por estado, cidade, risco ou bioma" title="Type in a name">
+
+    <div style="display: flex" id="table-wrapper">
+        <div id="table-scroll">
+        </div>
     </div>
 
 </body>
@@ -90,5 +122,6 @@
 <script src="js/LayersMaps/TemperaturaMedia.js"></script>
 <script src="js/LayersMaps/ActiveFire.js"></script>
 <script src="js/LayersMaps/ClearGlobe.js"></script>
+<script src="js/LayersMaps/FireRisk.js"></script>
 
 </html>

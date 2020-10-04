@@ -6,7 +6,29 @@ activeFire.addEventListener("click", function () {
 
     var layerClima = "MOD14A1_M_FIRE";
 
+    function showGlobe() {
+        var x = document.getElementById("globe");
+        var canvas = document.getElementById("canvasOne");
+        x.style.display = "block";
+        canvas.style.width = "1370"
+        canvas.style.height = "566"
+        buildGlobe();
+    }
+
+    function hideFilter() {
+        var x = document.getElementById("risk-filter");
+        x.style.display = "none";
+    }
+
+    function hideTable() {
+        var x = document.getElementById("table-wrapper");
+        x.style.display = "none";
+    }
+
     var createLayer = function (xmlDom) {
+        showGlobe()
+        hideFilter()
+        hideTable()
         var wms = new WorldWind.WmsCapabilities(xmlDom);
         var wmsLayerCapabilities = wms.getNamedLayer(layerClima);
         var wmsConfig = WorldWind.WmsLayer.formLayerConfiguration(wmsLayerCapabilities);
