@@ -1,5 +1,6 @@
 var fireRisk = document.querySelector("#FireRisk");
 
+
 $(document).ready(function(){
     $("#risk-filter").on("keyup", function() {
         var value = $(this).val().toLowerCase();
